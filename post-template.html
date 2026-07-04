@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Language We Never Finished Learning — UnBeaten Desire</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&family=Fraunces:ital,wght@1,400;0,500&display=swap');
+
+  :root{
+    --cream:#FFF8EF; --card:#FFFFFF; --ink:#2E2233; --muted:#8B7E8C;
+    --coral:#FF6B57; --marigold:#FFB84D; --rose:#FF8FA8; --line:#F0E4D4;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{ background:var(--cream); color:var(--ink); font-family:'Inter',sans-serif; }
+  a{ color:inherit; text-decoration:none; }
+
+  #progress{
+    position:fixed; top:0; left:0; height:3px; width:0%;
+    background:linear-gradient(90deg,var(--coral),var(--marigold));
+    z-index:999; transition:width .1s linear;
+  }
+
+  nav{
+    position:fixed; top:0; width:100%; z-index:100;
+    display:flex; justify-content:space-between; align-items:center;
+    padding:18px 6vw; background:rgba(255,248,239,0.9); backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .wordmark{ font-family:'Poppins'; font-weight:800; font-size:1.05rem; }
+  .wordmark span{ color:var(--coral); }
+  .back-link{ font-size:0.85rem; font-weight:600; color:var(--muted); display:flex; align-items:center; gap:6px; }
+  .back-link:hover{ color:var(--coral); }
+
+  .post-header{
+    max-width:720px; margin:0 auto; padding:130px 6vw 20px; text-align:center;
+  }
+  .post-tag{
+    display:inline-block; background:#FFE3E8; color:#D6486A; font-size:0.75rem;
+    font-weight:700; padding:6px 14px; border-radius:100px; margin-bottom:20px;
+  }
+  .post-header h1{
+    font-family:'Poppins'; font-weight:800; font-size:clamp(1.9rem,4.5vw,2.8rem);
+    line-height:1.2; margin-bottom:18px;
+  }
+  .post-meta-row{
+    display:flex; justify-content:center; gap:16px; font-size:0.85rem; color:var(--muted);
+    flex-wrap:wrap;
+  }
+
+  .post-body{
+    max-width:680px; margin:40px auto 0; padding:0 6vw 60px;
+    font-family:'Fraunces', serif; font-size:1.18rem; line-height:1.85; color:#3A2D3D;
+  }
+  .post-body p{ margin-bottom:26px; }
+  .post-body p:first-of-type::first-letter{
+    font-size:3.6rem; font-weight:700; float:left; line-height:0.85; margin:8px 10px 0 0;
+    color:var(--coral); font-family:'Poppins';
+  }
+  .pull-quote{
+    font-style:italic; font-size:1.4rem; text-align:center; color:var(--coral);
+    padding:20px 0; margin:40px 0; border-top:2px solid var(--line); border-bottom:2px solid var(--line);
+    position:relative;
+  }
+
+  /* Floating share-on-highlight popover */
+  #sharePopover{
+    position:absolute; display:none; background:var(--ink); color:#fff;
+    padding:8px 12px; border-radius:10px; font-family:'Inter'; font-size:0.8rem;
+    font-weight:600; gap:10px; z-index:200; align-items:center; box-shadow:0 8px 20px rgba(0,0,0,0.25);
+  }
+  #sharePopover button{
+    background:none; border:none; color:#fff; cursor:pointer; font-size:1rem;
+  }
+  #sharePopover::after{
+    content:''; position:absolute; bottom:-6px; left:50%; transform:translateX(-50%);
+    border:6px solid transparent; border-top-color:var(--ink);
+  }
+
+  /* Sticky reaction bar */
+  .reaction-bar{
+    position:fixed; bottom:24px; left:50%; transform:translateX(-50%);
+    background:var(--card); border:1px solid var(--line); border-radius:100px;
+    display:flex; gap:6px; padding:8px; box-shadow:0 12px 30px rgba(46,34,51,0.12); z-index:90;
+  }
+  .reaction-bar button{
+    background:var(--cream); border:none; border-radius:100px; padding:8px 14px;
+    cursor:pointer; font-size:1rem; transition:transform .2s, background .2s;
+    display:flex; align-items:center; gap:6px; font-family:'Inter'; font-weight:600; font-size:0.85rem;
+  }
+  .reaction-bar button:hover{ transform:translateY(-3px); background:var(--line); }
+  .reaction-bar .share-btn{ background:var(--coral); color:#fff; }
+  .reaction-bar .share-btn:hover{ background:#e85a47; }
+
+  /* Continue story */
+  .continue{
+    max-width:680px; margin:60px auto 0; padding:0 6vw;
+  }
+  .continue-card{
+    background:var(--card); border:1px solid var(--line); border-radius:22px;
+    padding:28px 30px; display:flex; justify-content:space-between; align-items:center;
+    gap:20px; flex-wrap:wrap;
+  }
+  .continue-label{ font-size:0.75rem; color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px; }
+  .continue-title{ font-family:'Poppins'; font-weight:700; font-size:1.1rem; }
+  .continue-arrow{
+    background:var(--coral); color:#fff; width:40px; height:40px; border-radius:100px;
+    display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;
+  }
+
+  /* Comments */
+  .comments{ max-width:680px; margin:60px auto 120px; padding:0 6vw; }
+  .comments h3{ font-family:'Poppins'; font-weight:700; font-size:1.2rem; margin-bottom:20px; }
+  .comment-form{ display:flex; flex-direction:column; gap:10px; margin-bottom:30px; }
+  .comment-form textarea{
+    border:1px solid var(--line); border-radius:14px; padding:14px 16px; font-family:'Inter';
+    font-size:0.92rem; resize:vertical; min-height:80px; background:var(--card);
+  }
+  .comment-form textarea:focus{ outline:none; border-color:var(--coral); }
+  .comment-form button{
+    align-self:flex-end; background:var(--ink); color:#fff; border:none; padding:10px 22px;
+    border-radius:100px; font-weight:700; font-size:0.85rem; cursor:pointer;
+  }
+  .comment{
+    background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px;
+    margin-bottom:12px; font-size:0.92rem;
+  }
+  .comment .who{ font-weight:700; font-size:0.85rem; margin-bottom:4px; }
+  .comment .when{ color:var(--muted); font-size:0.75rem; font-weight:400; margin-left:8px; }
+
+  .hero-img{
+    max-width:680px; margin:30px auto 0; padding:0 6vw;
+  }
+  .hero-img img{ width:100%; border-radius:20px; display:block; object-fit:cover; max-height:380px; }
+  .img-caption{ font-size:0.78rem; color:var(--muted); text-align:center; margin-top:10px; font-family:'Inter'; }
+
+  .ad-slot{
+    max-width:680px; margin:40px auto; padding:20px 6vw; text-align:center;
+    border:1px dashed var(--line); border-radius:14px; color:var(--muted);
+    font-size:0.78rem; font-family:monospace; background:rgba(255,255,255,0.5);
+  }
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav>
+  <a href="unbeatendesire-homepage.html" class="wordmark">Un<span>Beaten</span> Desire</a>
+  <a href="unbeatendesire-homepage.html" class="back-link">← All stories</a>
+</nav>
+
+<div class="post-header">
+  <span class="post-tag">💕 Love</span>
+  <h1>The Language We Never Finished Learning</h1>
+  <div class="post-meta-row">
+    <span>June 2026</span>
+    <span>·</span>
+    <span>6 min read</span>
+    <span>·</span>
+    <span>💬 12 comments</span>
+  </div>
+</div>
+
+<div class="hero-img">
+  <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=900&auto=format&fit=crop&q=60" alt="Two empty coffee cups on a table">
+  <div class="img-caption">Photo for illustration — replace with your own or a licensed stock image per post</div>
+</div>
+
+<div class="post-body" id="postBody">
+  <p>Some conversations end not because there was nothing left to say, but because saying it would have meant admitting it was already over. We circled the real thing for months — the way you circle a pothole you already know is there, swerving out of habit rather than thought.</p>
+  <p>I remember the last real conversation we had. Not the last conversation — that one was about logistics, about whose name was on what — but the last one that meant something. We were sitting in a parking lot outside a grocery store, engine running for the AC, and neither of us reached for the door handle for eleven minutes.</p>
+  <div class="pull-quote">"We didn't run out of love. We ran out of the courage it takes to keep translating it."</div>
+
+  <div class="ad-slot">AD SLOT — in-article native unit (Google's highest-RPM placement)</div>
+
+  <p>People say love is a language, and I used to think that meant vocabulary — the right words at the right time, the grand gesture, the perfectly timed apology. But I think now it's closer to grammar. It's not about knowing the words. It's about knowing the structure well enough that you can improvise inside it without breaking the whole sentence.</p>
+  <p>We never finished learning each other's grammar. We got good at the vocabulary — I knew her coffee order, she knew which side of the bed made me anxious — but we never got fluent in the structure underneath. What she needed when she went quiet. What I needed when I got loud.</p>
+  <p>Somewhere, she is still fluent in someone else's silences. And I am here, still translating, mid-sentence, to no one in particular.</p>
+</div>
+
+<div id="sharePopover">
+  <span>Share this line</span>
+  <button onclick="shareHighlight('twitter')">🐦</button>
+  <button onclick="shareHighlight('instagram')">📸</button>
+  <button onclick="shareHighlight('copy')">🔗</button>
+</div>
+
+<div class="continue">
+  <div class="continue-card">
+    <div>
+      <div class="continue-label">Continue the story</div>
+      <div class="continue-title">The Second Person I Loved Was Also Me →</div>
+    </div>
+    <div class="continue-arrow">→</div>
+  </div>
+</div>
+
+<div class="comments">
+  <h3>What did this stir up for you?</h3>
+  <div class="comment-form">
+    <textarea placeholder="Share your thoughts..."></textarea>
+    <button onclick="postComment()">Post comment</button>
+  </div>
+  <div id="commentsList">
+    <div class="comment"><span class="who">Ananya<span class="when">2 days ago</span></span>This hit way too close. The grammar line especially.</div>
+    <div class="comment"><span class="who">Rohit K.<span class="when">4 days ago</span></span>Reading this at 1am and crying a little, thanks for that 😭</div>
+  </div>
+</div>
+
+<div class="reaction-bar">
+  <button onclick="react(this,'❤️')">❤️ <span>482</span></button>
+  <button onclick="react(this,'🙏')">🙏 <span>96</span></button>
+  <button onclick="react(this,'💔')">💔 <span>210</span></button>
+  <button class="share-btn" onclick="shareFull()">Share this story</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const SUPABASE_URL = 'https://gycfomvjfsddvabzkegv.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_6IKxUgL9LX6oW7YFmqUuXA_IGeeEFpL';
+  const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+  const POST_SLUG = 'the-language-we-never-finished-learning';
+
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    document.getElementById('progress').style.width = scrolled + '%';
+  });
+
+  // Load existing comments on page load
+  async function loadComments(){
+    const { data, error } = await sb.from('comments')
+      .select('*').eq('post_slug', POST_SLUG)
+      .order('created_at', { ascending: false });
+    if(error){ console.error(error); return; }
+    const list = document.getElementById('commentsList');
+    if(data.length === 0){
+      list.innerHTML = '<div style="color:var(--muted); font-size:0.9rem;">Be the first to share your thoughts.</div>';
+      return;
+    }
+    list.innerHTML = data.map(c => `
+      <div class="comment"><span class="who">${c.author_name}<span class="when">${new Date(c.created_at).toLocaleDateString()}</span></span>${c.content}</div>
+    `).join('');
+  }
+  loadComments();
+
+  function react(btn, emoji){
+    const span = btn.querySelector('span');
+    span.textContent = parseInt(span.textContent) + 1;
+    btn.style.background = '#F0E4D4';
+    sb.from('reactions').insert({ post_slug: POST_SLUG, emoji: emoji }).then(({error}) => {
+      if(error) console.error('Reaction save failed:', error);
+    });
+  }
+
+  function shareFull(){
+    alert('Share sheet: pre-filled link + excerpt for Twitter/Instagram Stories/WhatsApp — wired in live build.');
+  }
+
+  // Highlight-to-share
+  const popover = document.getElementById('sharePopover');
+  let lastSelection = '';
+  document.getElementById('postBody').addEventListener('mouseup', (e) => {
+    const sel = window.getSelection();
+    const text = sel.toString().trim();
+    if(text.length > 8){
+      lastSelection = text;
+      const range = sel.getRangeAt(0).getBoundingClientRect();
+      popover.style.display = 'flex';
+      popover.style.top = (window.scrollY + range.top - 50) + 'px';
+      popover.style.left = (range.left + range.width/2 - 70) + 'px';
+    } else {
+      popover.style.display = 'none';
+    }
+  });
+
+  function shareHighlight(platform){
+    alert('Sharing highlighted line to ' + platform + ':\n\n"' + lastSelection + '"\n\n(generates a branded quote-card image in the live build)');
+    popover.style.display = 'none';
+  }
+
+  async function postComment(){
+    const ta = document.querySelector('.comment-form textarea');
+    if(!ta.value.trim()) return;
+    const btn = document.querySelector('.comment-form button');
+    btn.textContent = 'Posting...';
+    const { error } = await sb.from('comments').insert({
+      post_slug: POST_SLUG,
+      author_name: 'Guest',
+      content: ta.value
+    });
+    btn.textContent = 'Post comment';
+    if(error){
+      alert('Comment failed to post — please try again.');
+      console.error(error);
+      return;
+    }
+    ta.value = '';
+    loadComments();
+  }
+</script>
+
+</body>
+</html>

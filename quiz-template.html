@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Which Mythological Heart Are You? — UnBeaten Desire</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+  :root{
+    --cream:#FFF8EF; --card:#FFFFFF; --ink:#2E2233; --muted:#8B7E8C;
+    --coral:#FF6B57; --marigold:#FFB84D; --rose:#FF8FA8; --mint:#3FBF9F; --line:#F0E4D4;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{ background:var(--cream); color:var(--ink); font-family:'Inter',sans-serif; }
+  a{ color:inherit; text-decoration:none; }
+
+  nav{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:20px 6vw; border-bottom:1px solid var(--line);
+  }
+  .wordmark{ font-family:'Poppins'; font-weight:800; font-size:1.1rem; }
+  .wordmark span{ color:var(--coral); }
+  .back-link{ font-size:0.85rem; font-weight:600; color:var(--muted); }
+
+  .quiz-wrap{ max-width:640px; margin:0 auto; padding:50px 6vw 100px; }
+
+  .quiz-intro{ text-align:center; margin-bottom:36px; }
+  .quiz-badge{
+    display:inline-block; background:#FFE3E8; color:#D6486A; font-size:0.75rem; font-weight:700;
+    padding:6px 14px; border-radius:100px; margin-bottom:18px;
+  }
+  .quiz-intro h1{ font-family:'Poppins'; font-weight:800; font-size:clamp(1.7rem,4vw,2.3rem); margin-bottom:14px; line-height:1.25; }
+  .quiz-intro p{ color:var(--muted); line-height:1.6; }
+
+  .progress-track{ height:8px; background:var(--line); border-radius:100px; overflow:hidden; margin-bottom:30px; }
+  .progress-fill{ height:100%; background:linear-gradient(90deg,var(--coral),var(--marigold)); width:0%; transition:width .4s ease; border-radius:100px; }
+
+  .quiz-card{
+    background:var(--card); border:1px solid var(--line); border-radius:24px; padding:36px 30px;
+    box-shadow:0 12px 30px rgba(46,34,51,0.06);
+  }
+  .q-number{ font-size:0.8rem; font-weight:700; color:var(--coral); margin-bottom:10px; }
+  .q-text{ font-family:'Poppins'; font-weight:700; font-size:1.3rem; margin-bottom:26px; line-height:1.35; }
+  .options{ display:flex; flex-direction:column; gap:12px; }
+  .option-btn{
+    text-align:left; background:var(--cream); border:2px solid var(--line); border-radius:16px;
+    padding:16px 20px; font-family:'Inter'; font-size:0.95rem; font-weight:500; cursor:pointer;
+    transition:all .2s;
+  }
+  .option-btn:hover{ border-color:var(--marigold); background:#FFF3E0; }
+
+  .quiz-cta{
+    display:block; margin:0 auto; background:var(--coral); color:#fff; border:none;
+    padding:16px 36px; border-radius:100px; font-weight:700; font-size:1rem; cursor:pointer;
+    box-shadow:0 10px 24px rgba(255,107,87,0.3);
+  }
+
+  /* Result screen */
+  .result-screen{ display:none; text-align:center; }
+  .result-emoji{ font-size:4rem; margin-bottom:16px; }
+  .result-screen h2{ font-family:'Poppins'; font-weight:800; font-size:1.8rem; margin-bottom:10px; }
+  .result-tag{ color:var(--coral); font-weight:700; font-size:1.05rem; margin-bottom:20px; }
+  .result-screen p.desc{ color:var(--muted); line-height:1.7; max-width:50ch; margin:0 auto 30px; }
+  .result-actions{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  .result-actions button{
+    padding:14px 26px; border-radius:100px; font-weight:700; font-size:0.9rem; cursor:pointer; border:none;
+  }
+  .share-result{ background:var(--ink); color:#fff; }
+  .retake{ background:var(--card); color:var(--ink); border:1px solid var(--line) !important; }
+
+  /* Ad slot placeholders */
+  .ad-slot{
+    margin:40px 0; padding:20px; text-align:center; border:1px dashed var(--line);
+    border-radius:14px; color:var(--muted); font-size:0.78rem; font-family:monospace;
+    background:rgba(255,255,255,0.5);
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="unbeatendesire-homepage.html" class="wordmark">Un<span>Beaten</span> Desire</a>
+  <a href="unbeatendesire-homepage.html" class="back-link">← Back home</a>
+</nav>
+
+<div class="quiz-wrap">
+
+  <div id="introScreen" class="quiz-intro">
+    <div class="quiz-badge">🪔 2 min quiz</div>
+    <h1>Which Mythological Heart Are You?</h1>
+    <p>Sita's patience? Radha's longing? Take this quiz to find out which love archetype from the epics actually matches how you love.</p>
+    <br>
+    <button class="quiz-cta" onclick="startQuiz()">Start the quiz →</button>
+  </div>
+
+  <div id="quizScreen" style="display:none;">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="quiz-card">
+      <div class="q-number" id="qNumber">Question 1 of 5</div>
+      <div class="q-text" id="qText"></div>
+      <div class="options" id="qOptions"></div>
+    </div>
+  </div>
+
+  <div class="ad-slot">AD SLOT — 300×250 (renders between quiz and result in live build)</div>
+
+  <div id="resultScreen" class="result-screen">
+    <div class="result-emoji" id="resultEmoji">🪔</div>
+    <h2 id="resultTitle"></h2>
+    <div class="result-tag" id="resultTag"></div>
+    <p class="desc" id="resultDesc"></p>
+    <div class="result-actions">
+      <button class="share-result" onclick="shareResult()">Share my result</button>
+      <button class="retake" onclick="location.reload()">Retake quiz</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const SUPABASE_URL = 'https://gycfomvjfsddvabzkegv.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_6IKxUgL9LX6oW7YFmqUuXA_IGeeEFpL';
+  const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+  const QUIZ_SLUG = 'which-mythological-heart-are-you';
+
+  const questions = [
+    { q:"When someone hurts you, you tend to...", opts:["Forgive quietly and move forward","Confront it head-on, no matter what","Wait for them to understand on their own","Write it out before saying a word"] },
+    { q:"Your idea of love is closest to...", opts:["Devotion, even through distance","Partnership, side by side always","Longing that never fully resolves","A love you had to fight to keep"] },
+    { q:"When things go wrong, you...", opts:["Stay steady no matter what","Take action immediately","Retreat inward to process","Seek out the people who ground you"] },
+    { q:"Pick a word that describes your heart:", opts:["Patient","Loyal","Yearning","Resilient"] },
+    { q:"Your love story would be remembered for...", opts:["How much you endured","How fiercely you protected it","How deeply you felt, even unreturned","How you rebuilt after it broke"] },
+  ];
+
+  const results = [
+    { emoji:'🌸', title:'You love like Sita', tag:'The Devoted Heart', desc:'Your love is steady, patient, and unwavering — even when tested. You don\'t love loudly, you love faithfully, and that quiet endurance is your real strength.' },
+    { emoji:'💫', title:'You love like Radha', tag:'The Longing Heart', desc:'You feel love in its rawest, most unfiltered form. Distance doesn\'t dilute it for you — if anything, it deepens the ache and the devotion.' },
+    { emoji:'🔥', title:'You love like Draupadi', tag:'The Fierce Heart', desc:'You love with conviction and you protect what\'s yours without apology. Your love comes with a backbone — soft, but never breakable.' },
+  ];
+
+  let current = 0, score = 0;
+
+  function startQuiz(){
+    document.getElementById('introScreen').style.display = 'none';
+    document.getElementById('quizScreen').style.display = 'block';
+    renderQuestion();
+  }
+
+  function renderQuestion(){
+    const q = questions[current];
+    document.getElementById('qNumber').textContent = `Question ${current+1} of ${questions.length}`;
+    document.getElementById('qText').textContent = q.q;
+    document.getElementById('progressFill').style.width = ((current)/questions.length*100) + '%';
+    const optsDiv = document.getElementById('qOptions');
+    optsDiv.innerHTML = '';
+    q.opts.forEach((opt, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'option-btn';
+      btn.textContent = opt;
+      btn.onclick = () => { score += i; nextQuestion(); };
+      optsDiv.appendChild(btn);
+    });
+  }
+
+  function nextQuestion(){
+    current++;
+    if(current < questions.length){
+      renderQuestion();
+    } else {
+      document.getElementById('progressFill').style.width = '100%';
+      showResult();
+    }
+  }
+
+  function showResult(){
+    document.getElementById('quizScreen').style.display = 'none';
+    const idx = score % results.length;
+    const r = results[idx];
+    document.getElementById('resultEmoji').textContent = r.emoji;
+    document.getElementById('resultTitle').textContent = r.title;
+    document.getElementById('resultTag').textContent = r.tag;
+    document.getElementById('resultDesc').textContent = r.desc;
+    document.getElementById('resultScreen').style.display = 'block';
+
+    sb.from('quiz_results').insert({ quiz_slug: QUIZ_SLUG, result_key: r.tag }).then(({error}) => {
+      if(error) console.error('Quiz result save failed:', error);
+    });
+  }
+
+  function shareResult(){
+    alert('Generates a branded result card (image) for Instagram Stories/WhatsApp share in the live build — this is the #1 traffic driver for quiz content.');
+  }
+</script>
+
+</body>
+</html>
