@@ -1,5 +1,29 @@
-// Auto-generated from Blogger export — UnBeaten Desire real posts
+// Auto-generated — UnBeaten Desire posts
 const POSTS = [
+ {
+  "slug": "the-text-i-never-sent",
+  "title": "The Text I Never Sent",
+  "mood": "love",
+  "date": "2026-07-12",
+  "readMin": 5,
+  "excerpt": "Why the message you draft and delete a hundred times says more than the one you'd actually send — and what it means to text your ex without ever hitting send.",
+  "heroImg": "https://raw.githubusercontent.com/sshaasha/unbeatendesire/main/the-text-i-never-sent.jpeg",
+  "paragraphs": [
+   "I typed it out again last week. Three sentences, deleted, retyped, deleted again. You know the one. Not the angry version, not the pleading version — the calm one. The one that sounds like closure but is really just a longer way of saying I miss you.",
+   "There's a specific kind of insomnia that only shows up when your thumb is hovering over someone's name in your contacts. It's 1am, the apartment is quiet in that way that makes your own thoughts too loud, and suddenly you're a very convincing lawyer arguing for why this one text is different. Why this one wouldn't open anything back up. You almost believe yourself.",
+   "It's not really about them by that point, if I'm honest. It's about the version of you that existed when you two were still a sentence that hadn't ended yet. You're not reaching for the person. You're reaching for the version of your life where that door was still open.",
+   "I used to think not sending it was restraint. Discipline. Growth, even — proof I'd learned something. Now I think it's something quieter than that. It's grief, still working itself out through your hands instead of your chest, because your chest has already done enough crying for one relationship.",
+   "Here's what nobody says out loud: the text you don't send is doing its job anyway. You wrote it. You meant it, even for the four minutes it existed on your screen before you backspaced it into nothing. That counts for something, even if the only reader was you. Feelings don't need an audience to be real.",
+   "There's also a kind of vanity hiding in the urge, and I think it's worth naming honestly. Some part of us wants them to know we're still thinking about it. Wants the reminder to land, even gently, even kindly. Not to reopen anything — just to matter again for thirty seconds. That's human. It doesn't make you pathetic. It makes you someone who loved out loud once and hasn't fully figured out where to put that energy now that there's no one to give it to.",
+   "The hard part isn't wanting to reach out. Wanting is honest, and honesty isn't the enemy here. The hard part is knowing that reaching out would just reopen a door you spent months learning to walk past without touching the handle. And you know, somewhere underneath the 1am logic, that the message wouldn't actually fix anything. It would just extend the ending by a few more days.",
+   "I've noticed the urge comes in waves, and the waves get further apart, but they never fully stop showing up — not on some tidy timeline anyway. Three months in, you think you're done. Then a song comes on, or you pass a restaurant, or someone mentions their name in passing, and there you are again, drafting the same three sentences you've already deleted a dozen times before.",
+   "So I don't send it. I never do. But I've stopped pretending that not sending it makes the wanting disappear. It doesn't. It just means I've learned to sit with wanting something and not act on it, which might be the closest thing to peace I've found since it ended. Peace was never going to be the absence of missing someone. It was always going to be learning to carry that missing without letting it drive.",
+   "What helps, if anything does, is remembering that the version of me who wants to send that text is not wrong or broken. She's just still in the process of unlearning a habit that used to be love. Reaching for someone at midnight was how I showed up for the relationship. It makes sense that my hands don't know yet that the relationship is over.",
+   "If you're staring at a blank message thread tonight, half-composed and going nowhere — I'm not going to tell you not to feel it. I'm just going to tell you that the feeling passes, even when it doesn't feel like it will. Delete it if you need to. Save it in your notes app if that helps more. Either way, you don't have to send it for it to have counted.",
+   "And most of the time, the version of you on the other side of not sending it — the one who woke up the next morning and made coffee and went to work and didn't check if they'd read it — is the one you'll be glad you protected. Not because the wanting was shameful. But because you deserve a version of love, even the ending kind, that doesn't ask you to shrink back into old habits just to feel close to something again."
+  ],
+  "wordCount": 1012
+ },
  {
   "slug": "when-love-becomes-loud",
   "title": "When Love Becomes Loud",
