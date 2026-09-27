@@ -1,29 +1,5 @@
-// Auto-generated — UnBeaten Desire posts
+// Auto-generated from Blogger export — UnBeaten Desire real posts
 const POSTS = [
- {
-  "slug": "the-text-i-never-sent",
-  "title": "The Text I Never Sent",
-  "mood": "love",
-  "date": "2026-07-12",
-  "readMin": 5,
-  "excerpt": "Why the message you draft and delete a hundred times says more than the one you'd actually send — and what it means to text your ex without ever hitting send.",
-  "heroImg": "https://raw.githubusercontent.com/sshaasha/unbeatendesire/main/the-text-i-never-sent.jpeg",
-  "paragraphs": [
-   "I typed it out again last week. Three sentences, deleted, retyped, deleted again. You know the one. Not the angry version, not the pleading version — the calm one. The one that sounds like closure but is really just a longer way of saying I miss you.",
-   "There's a specific kind of insomnia that only shows up when your thumb is hovering over someone's name in your contacts. It's 1am, the apartment is quiet in that way that makes your own thoughts too loud, and suddenly you're a very convincing lawyer arguing for why this one text is different. Why this one wouldn't open anything back up. You almost believe yourself.",
-   "It's not really about them by that point, if I'm honest. It's about the version of you that existed when you two were still a sentence that hadn't ended yet. You're not reaching for the person. You're reaching for the version of your life where that door was still open.",
-   "I used to think not sending it was restraint. Discipline. Growth, even — proof I'd learned something. Now I think it's something quieter than that. It's grief, still working itself out through your hands instead of your chest, because your chest has already done enough crying for one relationship.",
-   "Here's what nobody says out loud: the text you don't send is doing its job anyway. You wrote it. You meant it, even for the four minutes it existed on your screen before you backspaced it into nothing. That counts for something, even if the only reader was you. Feelings don't need an audience to be real.",
-   "There's also a kind of vanity hiding in the urge, and I think it's worth naming honestly. Some part of us wants them to know we're still thinking about it. Wants the reminder to land, even gently, even kindly. Not to reopen anything — just to matter again for thirty seconds. That's human. It doesn't make you pathetic. It makes you someone who loved out loud once and hasn't fully figured out where to put that energy now that there's no one to give it to.",
-   "The hard part isn't wanting to reach out. Wanting is honest, and honesty isn't the enemy here. The hard part is knowing that reaching out would just reopen a door you spent months learning to walk past without touching the handle. And you know, somewhere underneath the 1am logic, that the message wouldn't actually fix anything. It would just extend the ending by a few more days.",
-   "I've noticed the urge comes in waves, and the waves get further apart, but they never fully stop showing up — not on some tidy timeline anyway. Three months in, you think you're done. Then a song comes on, or you pass a restaurant, or someone mentions their name in passing, and there you are again, drafting the same three sentences you've already deleted a dozen times before.",
-   "So I don't send it. I never do. But I've stopped pretending that not sending it makes the wanting disappear. It doesn't. It just means I've learned to sit with wanting something and not act on it, which might be the closest thing to peace I've found since it ended. Peace was never going to be the absence of missing someone. It was always going to be learning to carry that missing without letting it drive.",
-   "What helps, if anything does, is remembering that the version of me who wants to send that text is not wrong or broken. She's just still in the process of unlearning a habit that used to be love. Reaching for someone at midnight was how I showed up for the relationship. It makes sense that my hands don't know yet that the relationship is over.",
-   "If you're staring at a blank message thread tonight, half-composed and going nowhere — I'm not going to tell you not to feel it. I'm just going to tell you that the feeling passes, even when it doesn't feel like it will. Delete it if you need to. Save it in your notes app if that helps more. Either way, you don't have to send it for it to have counted.",
-   "And most of the time, the version of you on the other side of not sending it — the one who woke up the next morning and made coffee and went to work and didn't check if they'd read it — is the one you'll be glad you protected. Not because the wanting was shameful. But because you deserve a version of love, even the ending kind, that doesn't ask you to shrink back into old habits just to feel close to something again."
-  ],
-  "wordCount": 1012
- },
  {
   "slug": "when-love-becomes-loud",
   "title": "When Love Becomes Loud",
@@ -2208,5 +2184,68 @@ const POSTS = [
    "That time I didn’t get distracted from my ultimate goal even I don’t know about the world. I was very focused about my chocolate. In present we fail to focus on one thing in life. We are unable to decide our priorities. We are failing to do things which we always want to do. Even today my mother had that jar of MilkyBar chocolate in my room, which told me if you are capable only then you can get some extra in your life. I realized that even today my mom wanted to teach me that beta be focused and the world will be yours."
   ],
   "wordCount": 402
+ },
+ {
+  "slug": "the-text-i-never-sent",
+  "title": "The Text I Never Sent",
+  "mood": "love",
+  "date": "2026-07-12",
+  "readMin": 5,
+  "excerpt": "Why the message you draft and delete a hundred times says more than the one you'd actually send — and what it means to text your ex without ever hitting send.",
+  "heroImg": "PLACEHOLDER — swap in the real image URL once generated",
+  "paragraphs": [
+   "I typed it out again last week. Three sentences, deleted, retyped, deleted again. You know the one. Not the angry version, not the pleading version — the calm one. The one that sounds like closure but is really just a longer way of saying I miss you.",
+   "There's a specific kind of insomnia that only shows up when your thumb is hovering over someone's name in your contacts. It's 1am, the apartment is quiet in that way that makes your own thoughts too loud, and suddenly you're a very convincing lawyer arguing for why this one text is different. Why this one wouldn't open anything back up. You almost believe yourself.",
+   "It's not really about them by that point, if I'm honest. It's about the version of you that existed when you two were still a sentence that hadn't ended yet. You're not reaching for the person. You're reaching for the version of your life where that door was still open.",
+   "I used to think not sending it was restraint. Discipline. Growth, even — proof I'd learned something. Now I think it's something quieter than that. It's grief, still working itself out through your hands instead of your chest, because your chest has already done enough crying for one relationship.",
+   "Here's what nobody says out loud: the text you don't send is doing its job anyway. You wrote it. You meant it, even for the four minutes it existed on your screen before you backspaced it into nothing. That counts for something, even if the only reader was you. Feelings don't need an audience to be real.",
+   "There's also a kind of vanity hiding in the urge, and I think it's worth naming honestly. Some part of us wants them to know we're still thinking about it. Wants the reminder to land, even gently, even kindly. Not to reopen anything — just to matter again for thirty seconds. That's human. It doesn't make you pathetic. It makes you someone who loved out loud once and hasn't fully figured out where to put that energy now that there's no one to give it to.",
+   "The hard part isn't wanting to reach out. Wanting is honest, and honesty isn't the enemy here. The hard part is knowing that reaching out would just reopen a door you spent months learning to walk past without touching the handle. And you know, somewhere underneath the 1am logic, that the message wouldn't actually fix anything. It would just extend the ending by a few more days.",
+   "I've noticed the urge comes in waves, and the waves get further apart, but they never fully stop showing up — not on some tidy timeline anyway. Three months in, you think you're done. Then a song comes on, or you pass a restaurant, or someone mentions their name in passing, and there you are again, drafting the same three sentences you've already deleted a dozen times before.",
+   "So I don't send it. I never do. But I've stopped pretending that not sending it makes the wanting disappear. It doesn't. It just means I've learned to sit with wanting something and not act on it, which might be the closest thing to peace I've found since it ended. Peace was never going to be the absence of missing someone. It was always going to be learning to carry that missing without letting it drive.",
+   "What helps, if anything does, is remembering that the version of me who wants to send that text is not wrong or broken. She's just still in the process of unlearning a habit that used to be love. Reaching for someone at midnight was how I showed up for the relationship. It makes sense that my hands don't know yet that the relationship is over.",
+   "If you're staring at a blank message thread tonight, half-composed and going nowhere — I'm not going to tell you not to feel it. I'm just going to tell you that the feeling passes, even when it doesn't feel like it will. Delete it if you need to. Save it in your notes app if that helps more. Either way, you don't have to send it for it to have counted.",
+   "And most of the time, the version of you on the other side of not sending it — the one who woke up the next morning and made coffee and went to work and didn't check if they'd read it — is the one you'll be glad you protected. Not because the wanting was shameful. But because you deserve a version of love, even the ending kind, that doesn't ask you to shrink back into old habits just to feel close to something again."
+  ],
+  "wordCount": 1012
+ },
+ {
+  "slug": "what-nobody-tells-you-about-turning-30-alone",
+  "title": "What Nobody Tells You About Turning 30 Alone",
+  "mood": "reflection",
+  "date": "2026-07-19",
+  "readMin": 4,
+  "excerpt": "Turning 30 single isn't the crisis everyone warned you about — it's something quieter, and stranger, that nobody prepares you for.",
+  "heroImg": "PLACEHOLDER — swap in the real image URL once generated",
+  "paragraphs": [
+   "Everyone prepares you for turning 30 like it's a wound. They send the memes, the 'don't worry, life begins now' texts, the slightly too-loud reassurances. What nobody prepares you for is that it doesn't feel like a wound at all. It feels like standing in a room you've lived in for years and suddenly noticing it differently.",
+   "I thought I'd spend the day mourning something. A relationship I don't have, a timeline I didn't hit, a version of my life that was supposed to look more finished by now. Instead I spent it making coffee and noticing how quiet my apartment was, and realizing the quiet didn't feel like absence. It just felt like mine.",
+   "Nobody tells you that the loneliness you braced for shows up differently than expected. It's not dramatic. It doesn't arrive on your birthday like a scheduled appointment. It shows up on a random Tuesday, doing dishes, when you catch yourself wishing there was someone to tell about your day. And then it leaves just as quietly as it came.",
+   "What they also don't tell you is that turning 30 alone comes with a strange, unearned confidence. You've survived every version of yourself up to this point. The heartbreaks, the friendships that ended without explanation, the jobs that didn't work out — you're still here, still choosing yourself every morning. That has to count as something.",
+   "There's a version of this milestone that culture sells you, where 30 and single means you're behind. I don't buy it anymore. I think 30 and single just means you haven't settled for anything that wasn't right, which is its own kind of discipline, even if it doesn't come with a ring to show for it.",
+   "So if you're staring down a birthday that feels like it's supposed to mean something it doesn't, here's what I'd tell you: you're not behind. You're just early for a story that hasn't been written yet. And that's allowed to be its own kind of beautiful, even on the nights it doesn't feel like it."
+  ],
+  "wordCount": 398
+ },
+ {
+  "slug": "why-scorpios-fall-hardest-and-heal-slowest",
+  "title": "Why Scorpios Fall Hardest and Heal Slowest",
+  "mood": "zodiac",
+  "date": "2026-07-26",
+  "readMin": 5,
+  "excerpt": "Scorpio in love isn't a slow burn — it's a full-body event. Here's why they fall so hard, and why healing takes them longer than almost any other sign.",
+  "heroImg": "PLACEHOLDER — swap in the real image URL once generated",
+  "paragraphs": [
+   "There's no casual version of a Scorpio falling for someone. They don't ease into it. One day they're guarded, watching from a safe distance, and the next they've handed over a piece of themselves they don't usually let anyone near. That's the part people don't understand about this sign — the wall isn't indecision. It's just that once it comes down, it comes all the way down.",
+   "Ruled by Pluto, Scorpio doesn't do surface-level anything. Small talk feels like a waste of their time. They want to know what you're afraid of, what you think about at 2am, what you've never told anyone. And when they find someone who lets them in that deep, they fall like it's the only direction that's ever made sense. It's a very different kind of falling than the slow-burn crush most people are used to — it's closer to what I wrote about in <a href=\"/post.html?slug=the-text-i-never-sent\">the text I never sent</a>, that specific ache of caring more than you meant to.",
+   "That intensity is exactly why the ending hits them so hard. A Scorpio doesn't just lose a person when a relationship ends — they lose the version of themselves that finally felt safe enough to be fully seen. That's not something you shake off in a few weeks. It's something you have to rebuild from the inside out, piece by piece, usually alone, usually in silence.",
+   "Other signs might compartmentalize, distract, move on to the next thing. Scorpio can't. They feel everything at full volume, whether they show it or not — and most of the time, they don't show it. They process privately, running the whole relationship back in their head until they've made sense of every piece of it. It's not dramatic. It's thorough. It's the emotional equivalent of reading a book twice because you know you missed something the first time.",
+   "This is also why Scorpios make such loyal friends and partners once the trust is earned. They don't give access easily, but once you have it, you have all of it. There's no halfway with this sign — which is part of why turning inward after heartbreak can feel less like sadness and more like a kind of self-imposed exile. They're not punishing you. They're just recalibrating a system that doesn't know how to run at anything less than full intensity.",
+   "Healing, for a Scorpio, isn't linear and it isn't fast, and that's worth normalizing instead of pathologizing. Where an Aries might be onto someone new within weeks, or a Gemini might talk it out until it's talked away, a Scorpio needs to go underground for a while. They need to sit with the wreckage before they can even start identifying what's salvageable. If you've ever felt like you were taking too long to get over someone, and you have serious Scorpio placements, that's not weakness — that's just how deeply this sign metabolizes loss. It's a slower, more private process than what I described in <a href=\"/post.html?slug=what-nobody-tells-you-about-turning-30-alone\">turning 30 alone</a>, where the ache was more about timeline than heartbreak — Scorpio's healing timeline answers to nobody but itself.",
+   "Here's the thing people miss, though: that same intensity that makes heartbreak so brutal for a Scorpio is exactly why their love, when it's good, is unmatched. Nobody loves with more loyalty, more depth, more quiet devotion. The same water that drowns them is the water that makes them the most transformative person you'll ever let close. They don't do performative love. They do the kind that reorganizes your whole understanding of what it means to be known by someone.",
+   "There's also a mythology to this sign that fits almost too well — Scorpio is one of the only signs associated with rebirth, tied to the phoenix as much as the scorpion. That's not an accident. Every Scorpio I know has a before and after version of themselves, split cleanly by some loss that nearly took them under and didn't. They don't just survive heartbreak. They metabolize it into something that makes them harder to break next time, without making them any less capable of loving completely.",
+   "If you love a Scorpio, be patient with the wall. It's not there to keep you out — it's there because the last time it came down, it cost them everything to build it back up. Give them the silence they need without mistaking it for disinterest. And if you are one, know this: falling hard isn't your flaw. It's just proof you've never learned how to love halfway, and there's nothing broken about a person who refuses to do anything by half measures — least of all love."
+  ],
+  "wordCount": 1024
  }
 ];
