@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-07GJXBXD6F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-07GJXBXD6F');
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — UnBeaten Desire</title>
@@ -37,8 +46,7 @@
   footer{ padding:36px 6vw; text-align:center; font-size:0.8rem; color:var(--muted); }
 </style>
 </head>
-<body>
-<nav>
+<body><nav>
   <a href="unbeatendesire-homepage.html" class="wordmark">Un<span>Beaten</span> Desire</a>
   <a href="unbeatendesire-homepage.html" class="back-link">← Back home</a>
 </nav>
@@ -50,7 +58,7 @@
       <span class="contact-icon">📧</span>
       <div>
         <div class="contact-label">Email</div>
-        <div class="contact-value">hello@unbeatendesire.com</div>
+        <a id="emailLink" class="contact-value" href="#" style="text-decoration:underline; color:var(--coral);">Click to email me →</a>
       </div>
     </div>
     <div class="contact-row">
@@ -70,5 +78,14 @@
   </div>
 </div>
 <footer>UnBeaten Desire — est. 2011 · Bangalore & the internet 🪔</footer>
+
+<script>
+  // Email built at runtime from parts — keeps it out of the raw page source
+  const u = ['s','s','s','h','a','s','s','h','a','n','k'].join('');
+  const d = ['gmail','com'].join('.');
+  const addr = u + '@' + d;
+  const link = document.getElementById('emailLink');
+  link.href = 'mailto:' + addr + '?subject=' + encodeURIComponent('Hey from UnBeaten Desire!');
+</script>
 </body>
 </html>
